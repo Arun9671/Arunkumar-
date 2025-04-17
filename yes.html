@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title></title>
+</head>
+
+<body>
+  
+</body>
+
+</html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>She Said YES!</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background: #fff0f6;
+      text-align: center;
+      padding: 40px;
+      color: #d6006d;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 1.5em;
+      margin-bottom: 40px;
+    }
+
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+    }
+
+    .gallery img {
+      width: 250px;
+      height: 250px;
+      object-fit: cover;
+      border-radius: 20px;
+      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+      transition: transform 0.3s;
+    }
+
+    .gallery img:hover {
+      transform: scale(1.05);
+    }
+
+    .love-note {
+      font-size: 1.3em;
+      margin-top: 40px;
+      color: #8e004d;
+    }
+  </style>
+</head>
+<body>
+  <h1>my lovely baccha😘</h1>
+  <p>Our forever journey begins now...</p>
+
+  <div class="gallery">
+    <!-- Replace with your favorite photo URLs -->
+    <img src="f13761d1ccb028f4acee54be170b7ce5.jpg" alt="love1">
+    <img src="IMG-20230423-WA0013.jpg" alt="love2">
+    <img src="IMG_20230516_212101_713.jpg" alt="love3">
+    <img src="Snapchat-1373168334.jpg" alt="love4">
+    <img src="Snapchat-740534126.jpg" alt="love5">
+  </div>
+
+  <div class="love-note">
+    My Baccha, you’ve made me the happiest person in the world. I promise to hold your hand through every moment of this beautiful life. I love you forever.
+    <<style>
+        /* Hearts animation same as before */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: fall 6s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .hearts-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .hearts-container .heart {
+      left: calc(100% * var(--i));
+      animation-duration: calc(3s + var(--i) * 3s);
+      animation-delay: calc(var(--i) * 1s);
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-container">
+    <div class="heart" style="--i:0.05;"></div>
+    <div class="heart" style="--i:0.1;"></div>
+    <div class="heart" style="--i:0.15;"></div>
+    <div class="heart" style="--i:0.2;"></div>
+    <div class="heart" style="--i:0.25;"></div>
+    <div class="heart" style="--i:0.3;"></div>
+    <div class="heart" style="--i:0.35;"></div>
+    <div class="heart" style="--i:0.4;"></div>
+    <div class="heart" style="--i:0.45;"></div>
+    <div class="heart" style="--i:0.5;"></div>
+  </div>
+  </div>
+</body>
+</html>

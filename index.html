@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Proposal for My Baccha</title>
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(to bottom, #ffafbd, #ffc3a0);
+      height: 100vh;
+      overflow: hidden;
+      font-family: 'Segoe UI', sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+    }
+
+    .proposal-box {
+      background: rgba(255, 255, 255, 0.9);
+      padding: 40px;
+      border-radius: 20px;
+      text-align: center;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
+      z-index: 2;
+    }
+
+    .proposal-box h1 {
+      color: #d6006d;
+      font-size: 3em;
+    }
+
+    .proposal-box p {
+      font-size: 1.5em;
+      margin-bottom: 30px;
+      color: #333;
+    }
+
+    .btn-yes {
+      padding: 15px 30px;
+      background-color: #ff4081;
+      color: white;
+      border: none;
+      border-radius: 30px;
+      font-size: 1.2em;
+      cursor: pointer;
+      transition: background 0.3s ease;
+    }
+
+    .btn-yes:hover {
+      background-color: #e91e63;
+    }
+
+    /* Hearts animation same as before */
+    .heart {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      transform: rotate(45deg);
+      animation: fall 6s linear infinite;
+    }
+
+    .heart::before,
+    .heart::after {
+      content: "";
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background: red;
+      border-radius: 50%;
+    }
+
+    .heart::before {
+      top: -10px;
+      left: 0;
+    }
+
+    .heart::after {
+      left: -10px;
+      top: 0;
+    }
+
+    @keyframes fall {
+      0% {
+        transform: translateY(-10vh) rotate(45deg);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(110vh) rotate(45deg);
+        opacity: 0;
+      }
+    }
+
+    .hearts-container {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    .hearts-container .heart {
+      left: calc(100% * var(--i));
+      animation-duration: calc(3s + var(--i) * 3s);
+      animation-delay: calc(var(--i) * 1s);
+    }
+  </style>
+</head>
+<body>
+  <div class="hearts-container">
+    <div class="heart" style="--i:0.05;"></div>
+    <div class="heart" style="--i:0.1;"></div>
+    <div class="heart" style="--i:0.15;"></div>
+    <div class="heart" style="--i:0.2;"></div>
+    <div class="heart" style="--i:0.25;"></div>
+    <div class="heart" style="--i:0.3;"></div>
+    <div class="heart" style="--i:0.35;"></div>
+    <div class="heart" style="--i:0.4;"></div>
+    <div class="heart" style="--i:0.45;"></div>
+    <div class="heart" style="--i:0.5;"></div>
+  </div>
+
+  <div class="proposal-box">
+    <h1>Will You Marry Me, Baccha?</h1>
+    <p>You are my heart, my world, my everything. Will you be mine forever?</p>
+    <button class="btn-yes" onclick="window.location.href='yes.html'">YES</button>
+  </div>
+</body>
+</html>
